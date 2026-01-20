@@ -1,5 +1,5 @@
 # Aplicación Flask principal
-FLASK_APP=flask_app.py
+FLASK_APP=index.py
 
 # Entorno por defecto para desarrollo local
 FLASK_ENV=local
