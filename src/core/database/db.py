@@ -58,10 +58,7 @@ def init_app(app):
 
     with app.app_context():
         # Importar modelos para que Flask-Migrate los detecte
-        # from src.models.sqlalchemy_models import (
-        #     User, PasswordResetToken, Apiary, ApiaryAccess, 
-        #     Hive, Inspection, Inventory, Question, Monitoreo
-        # )
+        from src.features.auth.infrastructure.models.user_model import UserModel
         
         # Mostrar información del entorno y base de datos
         env = os.getenv('FLASK_ENV', 'local')
@@ -89,10 +86,10 @@ def init_app(app):
         # Solo crear tablas automáticamente si no existen migraciones
         migrations_dir = os.path.join(app.root_path, '..', 'migrations')
         if not os.path.exists(migrations_dir):
-            print("� No se encontraron migraciones, creando tablas automáticamente...")
+            print(" No se encontraron migraciones, creando tablas automáticamente...")
             try:
                 # Crear tablas usando el sistema actual para compatibilidad
-                db_connection = get_db()
+                db.create_all()
                 
                 # from src.models.users import UserModel
                 # from src.models.password_reset_tokens import PasswordResetTokenModel
