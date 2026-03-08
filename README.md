@@ -254,7 +254,9 @@ El sistema utiliza JSON Web Tokens (JWT) para manejar autenticación segura.
    ```
     npm start
    ```
+
 ---
+
 # 📡 API
 
 El backend expone endpoints REST para permitir la comunicación con aplicaciones frontend u otros servicios.
@@ -264,6 +266,7 @@ Las rutas se organizan por módulos dentro de:
    ```
     interfaces/routes
    ```
+
 ---
 
 # 🧪 Buenas Prácticas Implementadas
