@@ -152,10 +152,9 @@ El controlador no conoce la implementación concreta del repositorio, solo su in
 La configuración del sistema se gestiona mediante **variables de entorno**.
 
 - Archivo principal:
-  ```
-    .env
-
-  ```
+ ```
+   .env
+ ```
 
 **Ejemplo:**
 
